@@ -8,7 +8,7 @@ export function Copyright() {
         className="underline hover:text-gray-100"
         href="https://rocketseat.com.br"
       >
-        Rocketseat
+        portal dev.
       </a>
     </div>
   )
