@@ -6,7 +6,6 @@ import { pipeline } from 'node:stream'
 import { promisify } from 'node:util'
 
 const pump = promisify(pipeline)
-
 export async function uploadRoutes(app: FastifyInstance) {
   app.post('/upload', async (request, reply) => {
     const upload = await request.file({
@@ -34,7 +33,7 @@ export async function uploadRoutes(app: FastifyInstance) {
     const writeStream = createWriteStream(
       resolve(__dirname, '..', '..', 'uploads', fileName),
     )
-
+    console.log('upload aqui')
     await pump(upload.file, writeStream)
 
     const fullUrl = request.protocol.concat('://').concat(request.hostname)
