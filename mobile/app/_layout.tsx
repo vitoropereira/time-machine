@@ -57,6 +57,11 @@ export default function Layout() {
         <Stack.Screen name="index" redirect={isUserAuthenticated} />
         <Stack.Screen name="new" />
         <Stack.Screen name="memories" />
+        <Stack.Screen name="Radar" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="Profile"
+          options={{ headerTitle: 'Perfil no GitHub' }}
+        />
       </Stack>
     </ImageBackground>
   )
